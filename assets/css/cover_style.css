@@ -43,7 +43,7 @@ body {
   height: 100vh;
   
   /* GANTI PATH GAMBAR INI JIKA BERBEDA */
-  background-image: url('./assets/images/bgc.jpg'); 
+  background-image: url('../images/bgc.jpg'); 
   background-size: cover; /* Pastikan gambar menutupi seluruh area */
   background-position: center; /* Fokus di tengah */
   background-repeat: no-repeat;
