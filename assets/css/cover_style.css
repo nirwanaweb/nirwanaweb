@@ -43,7 +43,7 @@ body {
   height: 100vh;
   
   /* GANTI PATH GAMBAR INI JIKA BERBEDA */
-  background-image: url('/assets/images/bgc.jpg'); 
+  background-image: url('./assets/images/bgc.jpg'); 
   background-size: cover; /* Pastikan gambar menutupi seluruh area */
   background-position: center; /* Fokus di tengah */
   background-repeat: no-repeat;
@@ -72,12 +72,15 @@ body {
   padding: 20px;
   position: relative;
   z-index: 2; /* Pastikan konten di atas overlay */
+  
+  /* PENYESUAIAN MOBILE: Geser ke atas 100px */
+  margin-top: -100px; 
 }
 
 .cover .pengantin {
   width: 320px; /* Ukuran default untuk mobile */
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: 100-px;
   border-radius: 10px;
   object-fit: cover;
 }
@@ -130,15 +133,23 @@ body {
 /* --- MEDIA QUERY (Responsivitas) --- */
 @media (min-width: 768px) {
   /* Penyesuaian untuk tampilan desktop/tablet */
+  .cover {
+    /* KEMBALIKAN: Hapus margin-top negatif saat di desktop */
+    margin-top: 0;
+  }
+  
   .cover .pengantin {
     width: 300px;
+    margin:0px 0px 0px;
   }
 
   .cover h1 {
     font-size: 90px;
+    margin-bottom: 200px;
   }
 
   .cover p {
+    margin-bottom: auto;
     font-size: 22px;
   }
   
